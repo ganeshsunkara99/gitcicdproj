@@ -1,21 +1,8 @@
 const express = require("express");
 const itemRoutes = require("./routes/itemRoutes");
-const { EventEmitter } = require("node:events");
 
 function createApp() {
   const app = express();
-  const emitter = new EventEmitter();
-
-  emitter.on("orderCreated", (event) =>
-    console.log("Listener 1", event.orderId),
-  );
-  emitter.on("orderCreated", (event) =>
-    console.log("Listener 2", event.customerName),
-  );
-  emitter.on("orderCreated", () => console.log("Listener 3"));
-
-  emitter.emit("orderCreated", { orderId: 123, customerName: "John Doe" });
-  emitter.emit("orderCreated", { orderId: 123, customerName: "John Doeee" });
 
   app.use(express.json());
 
