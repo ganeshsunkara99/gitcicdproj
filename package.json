@@ -1,0 +1,14 @@
+{
+  "name": "gitcicdproj-sample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small Node.js app for Git CI/CD practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
